@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+
+import { ThemeProvider } from "@/components/theme/theme-provider";
+import Header from "@/components/Header";
+
 import "./globals.css";
 
 const geistSans = Geist({
@@ -27,7 +31,19 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <section className="grid items-center  min-h-screen p-8 pb-20 gap-16 font-[family-name:var(--font-geist-sans)]">
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Header />
+            <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+              {children}
+            </main>
+          </ThemeProvider>
+        </section>
       </body>
     </html>
   );
