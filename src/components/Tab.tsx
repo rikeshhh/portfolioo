@@ -1,73 +1,33 @@
 "use client";
-import { motion } from "framer-motion";
 import Link from "next/link";
-import React, { useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 
 export const SlideTabsExample = () => {
   return <SlideTabs />;
 };
 
 const SlideTabs = () => {
-  const [position, setPosition] = useState({
-    left: 0,
-    width: 0,
-    opacity: 0,
-  });
-
   return (
-    <ul
-      onMouseLeave={() => {
-        setPosition((pv) => ({
-          ...pv,
-          opacity: 0,
-        }));
-      }}
-      className="relative mx-auto flex w-fit rounded-full border-2 border-black bg-white p-1"
-    >
-      <Tab setPosition={setPosition} href="/info">
-        Info
-      </Tab>
-      <Tab setPosition={setPosition} href="/work">
-        Work
-      </Tab>
-      <Cursor position={position} />
+    <ul className="relative mx-auto flex w-fit rounded-full border-2 border-black bg-white p-1">
+      <Tab href="/">Info</Tab>
+      <Tab href="/work">Work</Tab>
     </ul>
   );
 };
 
-const Tab = ({ children, setPosition, href }) => {
-  const ref = useRef(null);
-
+const Tab = ({ children, href }) => {
+  const pathname = usePathname();
+  const isActive = pathname === href;
+  console.log(pathname);
   return (
     <Link href={href} className="block w-full h-full">
       <li
-        ref={ref}
-        onMouseEnter={() => {
-          if (!ref?.current) return;
-
-          const { width } = ref.current.getBoundingClientRect();
-
-          setPosition({
-            left: ref.current.offsetLeft,
-            width,
-            opacity: 1,
-          });
-        }}
-        className="relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase text-white mix-blend-difference md:px-5 md:py-3 md:text-base"
+        className={`relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase mix-blend-difference md:px-5 md:py-3 md:text-base ${
+          isActive ? "text-black bg-white rounded-full" : "text-white"
+        }`}
       >
         {children}
       </li>
     </Link>
-  );
-};
-
-const Cursor = ({ position }) => {
-  return (
-    <motion.li
-      animate={{
-        ...position,
-      }}
-      className="absolute z-0 h-7 rounded-full bg-black md:h-12"
-    />
   );
 };
