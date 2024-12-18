@@ -12,6 +12,7 @@ export default {
   		backgroundImage: {
   			'hero-image': "url('/images/sss.png')",
   			'custom-gradient': 'linear-gradient(307.67deg, #101010 29.23%, #4F46E5 90.28%)',
+			'info-gradient':'linear-gradient(to bottom, var(--on-background) 50%, #f2f2f233)',
   		},
   		colors: {
   			background: 'hsl(var(--background))',
@@ -59,7 +60,11 @@ export default {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
-  		}
+  		},
+		  fontFamily: {
+			unbounded: ['var(--font-unbounded)'],
+			roboto: ['var(--font-roboto)'],
+		  },
   	}
   },
   plugins: [require("tailwindcss-animate")],

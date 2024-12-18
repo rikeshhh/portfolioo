@@ -1,11 +1,11 @@
 export default function ContentCard() {
   return (
     <div className="group relative w-full max-w-5xl min-h-screen border border-gray-700 rounded-3xl overflow-hidden bg-black text-white mx-auto hover:shadow-lg transition-shadow duration-300 ease-in-out">
-      <div className="p-12 flex flex-col items-center justify-center group-hover:bg-custom-gradient transition-colors duration-500">
-        <h2 className="text-3xl font-bold mb-6 text-center group-hover:text-gray-300 transition-colors duration-300">
+      <div className="p-12 flex flex-col items-start justify-start group-hover:bg-custom-gradient transition-colors duration-500">
+        <h2 className="text-3xl font-bold mb-6  group-hover:text-gray-300 transition-colors duration-300">
           Stadia Bluetooth
         </h2>
-        <p className="text-gray-400 text-lg text-center">
+        <p className="text-gray-400 text-lg">
           Google 232
           <span className="block text-gray-500 group-hover:text-white transition-colors duration-300 mt-2">
             Giving a second life to over a million controllers
