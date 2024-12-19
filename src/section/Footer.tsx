@@ -9,7 +9,7 @@ export default function Footer() {
   const infoActive = pathname === "/";
 
   return (
-    <footer className="container mx-auto flex gap-12 px-4 py-12">
+    <footer className="container mx-auto flex gap-12 px-4 py-12 border-t-2">
       <ul className="flex flex-col [&>li]:md:text-2xl gap-6">
         <span className="flex items-center text-gray-400 text-base">MAIN</span>
         <li>
