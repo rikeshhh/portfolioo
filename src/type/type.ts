@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export interface BlogProps {
   blogLeft: string;
   blogLeftImage: string;
@@ -53,3 +55,7 @@ export interface LinkBoxProps {
   Icon: React.ComponentType<{ className?: string }>;
   href: string;
 }
+export interface TabProps  {
+  children: ReactNode;
+  href: string;
+};

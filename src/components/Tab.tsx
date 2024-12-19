@@ -1,4 +1,5 @@
 "use client";
+import { TabProps } from "@/type/type";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -15,7 +16,7 @@ const SlideTabs = () => {
   );
 };
 
-const Tab = ({ children, href }) => {
+const Tab: React.FC<TabProps> = ({ children, href }) => {
   const pathname = usePathname();
   const isActive = pathname === href;
   console.log(pathname);
