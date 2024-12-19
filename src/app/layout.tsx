@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import { Roboto, Unbounded } from "next/font/google";
 
 import { ThemeProvider } from "@/components/theme/theme-provider";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+import Footer from "@/section/Footer";
 
 import "./globals.css";
+import Header from "@/section/Header";
 
 const unbounded = Unbounded({
   subsets: ["latin"],

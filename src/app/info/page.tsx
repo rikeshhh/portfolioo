@@ -3,8 +3,8 @@ import { Dot } from "lucide-react";
 import { BlogOne, BlogThree, BlogTwo } from "@/data/InfoData";
 import InfoCard from "@/components/InfoCard";
 import InfoCardTwo from "@/components/InfoCardTwo";
-import MyEducation from "@/components/Education";
-import MyExperience from "@/components/Experience";
+import MyEducation from "@/section/Education";
+import MyExperience from "@/section/Experience";
 
 export default function Info(){
     return(

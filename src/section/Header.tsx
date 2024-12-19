@@ -9,9 +9,10 @@ import {
   MenubarTrigger,
 } from "@/components/ui/menubar";
 import { AtSign, MoveUpRight } from "lucide-react";
+import Link from "next/link";
 
-import { ModeToggle } from "./theme/ModeToggle";
-import { SlideTabsExample } from "./Tab";
+import { SlideTabsExample } from "@/components/Tab";
+import { ModeToggle } from "@/components/theme/ModeToggle";
 
 export default function Header() {
   return (
@@ -24,15 +25,25 @@ export default function Header() {
         <SlideTabsExample />
         <div className="gap-4 md:block hidden">
           <div className="flex gap-4">
-          <p className="flex gap-2 items-center">
-            Linkdein <MoveUpRight size={12} />
-          </p>
-          <p className="flex gap-2 items-center">
-            Resume <MoveUpRight size={12} />
-          </p>
+          <Link
+              href="https://www.linkedin.com/in/rikesh-shrestha-a521b1197"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex gap-2 items-center"
+            >
+              LinkedIn <MoveUpRight size={12} />
+            </Link>
+            <Link
+                href="/file/RikeshShresthaResume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex gap-2 items-center"
+            >
+              Resume <MoveUpRight size={12} />
+            </Link>
           </div>
         </div>
-     <div className="block md:hidden">
+     <div className="block sm:hidden">
      <Menubar>
           <MenubarMenu>
             <MenubarTrigger>
