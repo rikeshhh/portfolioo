@@ -1,4 +1,4 @@
-import { BlogProps } from "@/type/type";
+import { BlogProps, Project } from "@/type/type";
 
 export const BlogOne: BlogProps[] = [
   {
@@ -60,5 +60,21 @@ export const Education= [
     degree: "Bachelor's Degree, Information Technology",
     duration: "2019 - 2024",
     description: "Completed my bachelor's in BCA.",
+  },
+];
+export const projects: Project[] = [
+  {
+    title: "Stadia Bluetooth",
+    description: "Giving a second life to over a million controllers",
+    subtitle: "Google 232",
+    imageUrl: "/images/sss.png", 
+    projectUrl: "https://github.com/username/stadia-bluetooth",
+  },
+  {
+    title: "Project 2",
+    description: "Another project description here",
+    subtitle: "Project Subtitle 2",
+    imageUrl: "/images/sss.png", 
+    projectUrl: "https://github.com/username/project-2",
   },
 ];

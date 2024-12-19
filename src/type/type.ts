@@ -35,3 +35,17 @@ export interface ExperienceData {
 export interface EducationData {
   Education: EducationItem[];
 }
+export interface ContentCardProps {
+  title: string;
+  description: string;
+  subtitle: string;
+  imageUrl: string;
+  projectUrl: string;
+}
+export interface Project {
+  title: string;
+  description: string;
+  subtitle: string;
+  imageUrl: string; 
+  projectUrl: string; 
+}
