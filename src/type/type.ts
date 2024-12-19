@@ -49,3 +49,7 @@ export interface Project {
   imageUrl: string; 
   projectUrl: string; 
 }
+export interface LinkBoxProps {
+  Icon: React.ComponentType<{ className?: string }>;
+  href: string;
+}

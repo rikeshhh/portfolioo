@@ -1,10 +1,12 @@
 import { useAnimate } from "framer-motion";
 import { useTheme } from "next-themes";
-import React from "react";
+import React, { MouseEvent } from "react";
 import { FaCss3, FaGithub, FaHtml5, FaJs, FaReact } from "react-icons/fa";
 import { IoLogoFirebase } from "react-icons/io5";
 import { RiTailwindCssFill,RiNextjsFill  } from "react-icons/ri";
 import { SiPostman } from "react-icons/si";
+
+import { LinkBoxProps } from "@/type/type";
 
 export const ExampleStack = () => {
   return (
@@ -44,26 +46,26 @@ const TOP_RIGHT_CLIP = "polygon(0 0, 0 100%, 100% 100%, 0% 100%)";
 const BOTTOM_LEFT_CLIP = "polygon(100% 100%, 100% 0, 100% 100%, 0 100%)";
 const TOP_LEFT_CLIP = "polygon(0 0, 100% 0, 100% 100%, 100% 0)";
 
-const ENTRANCE_KEYFRAMES = {
+const ENTRANCE_KEYFRAMES: Record<string, string[]> = {
   left: [BOTTOM_RIGHT_CLIP, NO_CLIP],
   bottom: [BOTTOM_RIGHT_CLIP, NO_CLIP],
   top: [BOTTOM_RIGHT_CLIP, NO_CLIP],
   right: [TOP_LEFT_CLIP, NO_CLIP],
 };
 
-const EXIT_KEYFRAMES = {
+const EXIT_KEYFRAMES: Record<string, string[]> = {
   left: [NO_CLIP, TOP_RIGHT_CLIP],
   bottom: [NO_CLIP, TOP_RIGHT_CLIP],
   top: [NO_CLIP, TOP_RIGHT_CLIP],
   right: [NO_CLIP, BOTTOM_LEFT_CLIP],
 };
 
-const LinkBox = ({ Icon, href }) => {
-  const [scope, animate] = useAnimate();
+const LinkBox: React.FC<LinkBoxProps> = ({ Icon, href }) => {
+  const [scope, animate] = useAnimate<HTMLDivElement>();
 
-  const getNearestSide = (e) => {
-    const box = e.target.getBoundingClientRect();
-
+  const getNearestSide = (e: MouseEvent<HTMLAnchorElement>) => {
+    const target = e.target as HTMLElement;
+    const box = target.getBoundingClientRect();
     const proximityToLeft = {
       proximity: Math.abs(box.left - e.clientX),
       side: "left",
@@ -91,7 +93,7 @@ const LinkBox = ({ Icon, href }) => {
     return sortedProximity[0].side;
   };
 
-  const handleMouseEnter = (e) => {
+  const handleMouseEnter = (e:MouseEvent<HTMLAnchorElement>) => {
     const side = getNearestSide(e);
 
     animate(scope.current, {
@@ -99,15 +101,15 @@ const LinkBox = ({ Icon, href }) => {
     });
   };
 
-  const handleMouseLeave = (e) => {
+  const handleMouseLeave = (e: MouseEvent<HTMLAnchorElement>) => {
     const side = getNearestSide(e);
 
     animate(scope.current, {
       clipPath: EXIT_KEYFRAMES[side],
     });
   };
-  const { theme } = useTheme()
-console.log(theme);
+  const { theme }: { theme?: string } = useTheme();
+  console.log(theme);
   return (
     <a
       href={href}
