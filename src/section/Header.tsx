@@ -1,20 +1,14 @@
 "use client";
-import {
-  Menubar,
-  MenubarContent,
-  MenubarItem,
-  MenubarMenu,
-  MenubarSeparator,
-  MenubarShortcut,
-  MenubarTrigger,
-} from "@/components/ui/menubar";
-import { AtSign, MoveUpRight } from "lucide-react";
+
+import { MoveUpRight} from "lucide-react";
 import Link from "next/link";
 
 import { SlideTabsExample } from "@/components/Tab";
 import { ModeToggle } from "@/components/theme/ModeToggle";
+import HamburgerMenu from "@/components/HmburgerMenu";
 
 export default function Header() {
+
   return (
     <header className="w-full py-4 sticky top-0 z-50 container mx-auto px-4">
       <nav className="flex items-center justify-between w-full">
@@ -43,32 +37,7 @@ export default function Header() {
             </Link>
           </div>
         </div>
-     <div className="block sm:hidden">
-     <Menubar>
-          <MenubarMenu>
-            <MenubarTrigger>
-              <AtSign size={20} />
-            </MenubarTrigger>
-            <MenubarContent>
-              <MenubarItem>
-                Linkdein
-                <MenubarShortcut>
-                  <MoveUpRight size={12} />
-                </MenubarShortcut>
-              </MenubarItem>
-              <MenubarSeparator />
-              <MenubarItem>
-                {" "}
-                Resume
-                <MenubarShortcut>
-                  <MoveUpRight size={12} />
-                </MenubarShortcut>
-              </MenubarItem>
-              <MenubarSeparator />
-            </MenubarContent>
-          </MenubarMenu>
-        </Menubar>
-     </div>
+      <HamburgerMenu/>
         <ModeToggle />
       </nav>
     </header>

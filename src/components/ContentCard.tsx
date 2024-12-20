@@ -1,5 +1,6 @@
-import { ContentCardProps } from "@/type/type";
 import { MoveRight } from "lucide-react";
+
+import { ContentCardProps } from "@/type/type";
 
 export function ContentCard({
   title,
@@ -9,8 +10,8 @@ export function ContentCard({
   projectUrl,
 }: ContentCardProps) {
   return (
-    <div className="group relative w-full max-w-5xl min-h-screen border border-gray-700 rounded-3xl overflow-hidden bg-black text-white mx-auto hover:shadow-lg transition-shadow duration-300 ease-in-out">
-      <div className="p-12 flex flex-col items-start justify-start group-hover:bg-custom-gradient transition-colors duration-500">
+    <div id="contentCard" className="group relative w-full max-w-5xl md:min-h-screen border border-gray-700 rounded-3xl overflow-hidden bg-black text-white mx-auto hover:shadow-lg transition-shadow duration-300 ease-in-out">
+      <div className="md:p-12 flex flex-col items-start justify-start group-hover:bg-custom-gradient transition-colors duration-500 p-4">
         <h2 className="text-3xl font-bold mb-6 group-hover:text-gray-300 transition-colors duration-300">
           {title}
         </h2>
@@ -21,12 +22,13 @@ export function ContentCard({
           </span>
         </p>
       </div>
-      <div className="relative w-full h-[500px] overflow-hidden p-12">
+      <div className="relative w-full overflow-hidden md:p-12 aspect-[16/9] md:aspect-auto">
         <div
-          className="bg-center w-full h-full bg-no-repeat transform group-hover:scale-110 transition-transform duration-500 ease-in-out"
+          className="bg-center bg-cover w-full h-full bg-no-repeat transform group-hover:scale-110 transition-transform duration-500 ease-in-out"
           style={{ backgroundImage: `url(${imageUrl})` }}
         ></div>
       </div>
+
       <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-red-500 to-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
       <a
         href={projectUrl}
@@ -34,7 +36,7 @@ export function ContentCard({
         rel="noopener noreferrer"
         className="absolute top-0 right-0 p-4  text-white rounded-lg hover:bg-red-600 transition-colors duration-300"
       >
-      <MoveRight />
+        <MoveRight />
       </a>
     </div>
   );
