@@ -1,4 +1,5 @@
 import { Menu, MoveUpRight, X } from "lucide-react";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function HamburgerMenu(){
@@ -29,22 +30,24 @@ export default function HamburgerMenu(){
   
             <ul className="space-y-8 text-center">
               <li>
-                <a
-                  href="#"
-                  className="text-2xl hover:text-gray-300 transition-colors"
-                >
-                  LinkedIn
-                  <MoveUpRight size={16} className="inline ml-2" />
-                </a>
+              <Link
+              href="https://www.linkedin.com/in/rikesh-shrestha-a521b1197"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex gap-2 items-center"
+            >
+              LinkedIn <MoveUpRight size={12} />
+            </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="text-2xl hover:text-gray-300 transition-colors"
-                >
-                  Resume
-                  <MoveUpRight size={16} className="inline ml-2" />
-                </a>
+              <Link
+                href="/file/RikeshShresthaResume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex gap-2 items-center"
+            >
+              Resume <MoveUpRight size={12} />
+            </Link>
               </li>
             </ul>
           </div>

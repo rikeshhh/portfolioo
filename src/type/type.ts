@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 
 export interface BlogProps {
+  blogHeadline:string;
   blogLeft: string;
   blogLeftImage: string;
   blogRight: string;

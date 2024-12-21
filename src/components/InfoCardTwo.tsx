@@ -26,8 +26,8 @@ export default function InfoCardTwo({blogContent}:BlogComponentProps) {
               ></div>
             </div>
             <div className="mt-4 ">
-              <h2 className="flex items-center text-gray-400"><Dot size={48} strokeWidth={3} />{blog.blogLeft}</h2>
-              <p>{blog.blogRight}</p>
+              <h2 className="flex items-center text-gray-400"><Dot size={48} strokeWidth={3} />{blog.blogHeadline}</h2>
+              <p>{blog.blogLeft}</p>
             </div>
           </div>
         </div>

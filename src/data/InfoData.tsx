@@ -2,34 +2,33 @@ import { BlogProps, Project } from "@/type/type";
 
 export const BlogOne: BlogProps[] = [
   {
-    blogLeft: "Hello, I'm a Frontend Developer",
+    blogHeadline: "Hello, I'm a Frontend Developer",
+    blogLeft: "Crafting intuitive and dynamic web interfaces is my passion. I thrive on creating seamless user experiences.",
     blogLeftImage: "https://cdsassets.apple.com/live/7WUAS350/images/macos/monterey/macos-monterey-mba-screenshot-toolbar.jpg",
-    blogRight:
-      "I specialize in creating interactive and user-friendly web interfaces using modern technologies like React and Tailwind CSS.",
+    blogRight: "I specialize in modern technologies like React, Tailwind CSS, and Firebase, with experience in healthcare and e-commerce projects.",
     blogRightImage: "https://cdsassets.apple.com/live/7WUAS350/images/macos/monterey/macos-monterey-mba-screenshot-toolbar.jpg",
   },
 ];
 
 export const BlogTwo: BlogProps[] = [
   {
-    blogLeft: "My Journey into Web Development",
+    blogHeadline: "My Journey into Web Development",
+    blogLeft: "From experimenting with HTML to mastering React and Next.js, my journey has been hands-on and fulfilling.",
     blogLeftImage: "https://cdsassets.apple.com/live/7WUAS350/images/macos/monterey/macos-monterey-mba-screenshot-toolbar.jpg",
-    blogRight:
-      "From learning the basics of HTML and CSS to mastering frameworks like Next.js, my passion for coding keeps me motivated.",
+    blogRight: "I've built projects like an asset management dashboard and a job portal connecting recruiters and job seekers.",
     blogRightImage: "https://cdsassets.apple.com/live/7WUAS350/images/macos/monterey/macos-monterey-mba-screenshot-toolbar.jpg",
   },
 ];
 
 export const BlogThree: BlogProps[] = [
   {
-    blogLeft: "What I Do in My Free Time",
+    blogHeadline: "What I Do in My Free Time",
+    blogLeft: "When not coding, you'll find me fishing, experimenting in the kitchen, or diving into new tech trends.",
     blogLeftImage: "https://cdsassets.apple.com/live/7WUAS350/images/macos/monterey/macos-monterey-mba-screenshot-toolbar.jpg",
-    blogRight:
-      "Apart from coding, I enjoy exploring new tech, blogging, and occasionally dabbling in graphic design to keep my creativity flowing.",
+    blogRight: "Cooking and fishing help me relax, while exploring tech keeps my creativity flowing.",
     blogRightImage: "https://cdsassets.apple.com/live/7WUAS350/images/macos/monterey/macos-monterey-mba-screenshot-toolbar.jpg",
   },
 ];
-
 
 export const Experience= [
   {
@@ -64,17 +63,45 @@ export const Education= [
 ];
 export const projects: Project[] = [
   {
-    title: "Stadia Bluetooth",
-    description: "Giving a second life to over a million controllers",
-    subtitle: "Google 232",
-    imageUrl: "/images/sss.png", 
-    projectUrl: "https://github.com/username/stadia-bluetooth",
+    title: "Customer To Customer",
+    description: "A platform enabling customers to buy and sell items directly to each other, giving unused products a new life.",
+    subtitle: "Revolutionizing Peer-to-Peer Commerce",
+    imageUrl: "/screenshot/customer2customer.png",
+    projectUrl: "https://customer2customer.vercel.app/",
   },
   {
-    title: "Project 2",
-    description: "Another project description here",
-    subtitle: "Project Subtitle 2",
-    imageUrl: "/images/sss.png", 
-    projectUrl: "https://github.com/username/project-2",
+    title: "Assets Management System",
+    description: "A comprehensive tool for managing and tracking organizational assets efficiently and securely.",
+    subtitle: "Streamlining Asset Tracking for Organizations",
+    imageUrl: "/screenshot/Ams.png",
+    projectUrl: "https://asset-management-system-one.vercel.app/",
+  },
+  {
+    title: "Student Management System",
+    description: "An application for managing student information, courses, and academic records in an educational institution.",
+    subtitle: "Simplifying Student Data Management",
+    imageUrl: "/screenshot/sms.png",
+    projectUrl: "https://student-management-system-wine.vercel.app/",
+  },
+  {
+    title: "Weather Forecastor",
+    description: "A real-time weather forecasting application providing accurate predictions for various locations worldwide.",
+    subtitle: "Real-Time Weather Updates at Your Fingertips",
+    imageUrl: "/screenshot/wf.png",
+    projectUrl: "https://intuji-t-3.vercel.app/",
+  },
+  {
+    title: "Dashboard",
+    description: "An interactive dashboard showcasing key metrics and visualizations for effective data-driven decision-making.",
+    subtitle: "Data Insights and Visualizations Simplified",
+    imageUrl: "/screenshot/rr.png",
+    projectUrl: "https://rr-dashboard-beryl.vercel.app/",
+  },
+  {
+    title: "Multi User Tic Tac Toe",
+    description: "A multiplayer version of the classic Tic Tac Toe game, allowing users to compete in real time.",
+    subtitle: "Experience Classic Tic Tac Toe with Friends Online",
+    imageUrl: "/screenshot/ticTac.png",
+    projectUrl: "https://socket-jet.vercel.app/",
   },
 ];

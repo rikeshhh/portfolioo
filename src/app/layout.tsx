@@ -3,9 +3,9 @@ import { Roboto, Unbounded } from "next/font/google";
 
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import Footer from "@/section/Footer";
+import Header from "@/section/Header";
 
 import "./globals.css";
-import Header from "@/section/Header";
 
 const unbounded = Unbounded({
   subsets: ["latin"],
@@ -42,7 +42,7 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <Header />
-            <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start container mx-auto px-8">
+            <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start container mx-auto px-8 w-full">
               {children}
             </main>
               <Footer />

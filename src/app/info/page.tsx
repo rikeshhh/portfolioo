@@ -1,13 +1,14 @@
 "use client";
 import { Dot } from "lucide-react";
+import { useState, useEffect } from "react";
+
 import { BlogOne, BlogThree, BlogTwo } from "@/data/InfoData";
 import InfoCard from "@/components/InfoCard";
 import InfoCardTwo from "@/components/InfoCardTwo";
+import Loader from "@/components/Loader"; 
 import MyEducation from "@/section/Education";
 import MyExperience from "@/section/Experience";
 import Stack from "@/section/Stack";
-import { useState, useEffect } from "react";
-import Loader from "@/components/Loader"; 
 
 export default function Info() {
   const [loading, setLoading] = useState(true);
@@ -36,6 +37,12 @@ export default function Info() {
                 I am passionate about creating beautiful products that empower
                 people.
               </h2>
+          <div className="py-4  text-gray-400 md:hidden block">
+          <span className="flex items-cente">
+                Software Engineer
+              </span>
+          <p>Rikesh Shrestha</p>
+          </div>
             </div>
             <InfoCard blogContent={BlogOne} />
             <InfoCardTwo blogContent={BlogTwo} />
