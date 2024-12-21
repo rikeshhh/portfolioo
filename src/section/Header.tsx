@@ -17,6 +17,7 @@ export default function Header() {
           <span>Software Engineer</span>
         </div>
         <SlideTabsExample />
+        <ModeToggle />
         <div className="gap-4 md:block hidden">
           <div className="flex gap-4">
           <Link
@@ -38,7 +39,6 @@ export default function Header() {
           </div>
         </div>
       <HamburgerMenu/>
-        <ModeToggle />
       </nav>
     </header>
   );

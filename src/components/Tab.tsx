@@ -24,7 +24,7 @@ const Tab: React.FC<TabProps> = ({ children, href }) => {
     <Link href={href} className="block w-full h-full">
       <li
         className={`relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase mix-blend-difference md:px-5 md:py-3 md:text-base ${
-          isActive ? "text-black bg-white rounded-full" : "text-white"
+          isActive ? "text-black bg-white rounded-full" : "text-white "
         }`}
       >
         {children}

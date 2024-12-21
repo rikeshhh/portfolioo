@@ -4,13 +4,13 @@ import { BlogComponentProps } from "@/type/type";
 
 export default function InfoCard({blogContent}:BlogComponentProps) {
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto border-b-2 border-gray-400 pb-4">
  {blogContent.map((blog, index) => (
         <div key={index} className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="flex flex-col items-center justify-center h-full">
             <div className="relative w-full h-[400px] overflow-hidden p-4 border rounded-3xl">
               <div
-                className="bg-center w-full h-full bg-no-repeat"
+                className="bg-center bg-contain w-full h-full bg-no-repeat"
                 style={{ backgroundImage: `url(${blog.blogLeftImage})` }}
               ></div>
             </div>
@@ -23,9 +23,9 @@ export default function InfoCard({blogContent}:BlogComponentProps) {
             <div className="mb-4 ">
               <p>{blog.blogRight}</p>
             </div>
-            <div className="relative w-auto h-[400px] overflow-hidden p-4 border rounded-3xl">
+            <div className="relative w-full h-[400px] overflow-hidden p-4 border rounded-3xl">
               <div
-                className="bg-center w-full h-full bg-no-repeat rounded-3xl"
+                className="bg-center bg-contain w-full h-full bg-no-repeat"
                 style={{ backgroundImage: `url(${blog.blogRightImage})` }}
               ></div>
             </div>

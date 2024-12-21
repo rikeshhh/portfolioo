@@ -1,4 +1,5 @@
 import { MoveRight } from "lucide-react";
+import { useTheme } from "next-themes";
 
 import { ContentCardProps } from "@/type/type";
 
@@ -9,10 +10,12 @@ export function ContentCard({
   imageUrl,
   projectUrl,
 }: ContentCardProps) {
+  const { theme }: { theme?: string } = useTheme();
+
   return (
     <div
       id="contentCard"
-      className="group relative w-full max-w-5xl md:min-h-screen border border-gray-700 rounded-3xl overflow-hidden bg-black text-white mx-auto hover:shadow-lg transition-shadow duration-300 ease-in-out"
+      className= {`${theme==="dark"?"":"bg-white text-black"} group relative w-full max-w-5xl md:min-h-screen border border-gray-700 rounded-3xl overflow-hidden  mx-auto hover:shadow-lg transition-shadow duration-300 ease-in-out`}
     >
       <div className="flex flex-col items-start justify-start p-4 md:p-12 group-hover:bg-custom-gradient transition-colors duration-500">
         <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 group-hover:text-gray-300 transition-colors duration-300">{title}</h2>
@@ -26,7 +29,7 @@ export function ContentCard({
 
       <div className="relative w-full h-64 md:h-auto md:aspect-[16/9] rounded-3xl overflow-hidden p-12">
         <div
-          className="bg-cover bg-no-repeat bg-center w-full h-full transform group-hover:scale-110 transition-transform duration-500 ease-in-out"
+          className="bg-contain bg-no-repeat bg-center w-full h-full transform group-hover:scale-110 transition-transform duration-500 ease-in-out"
           style={{ backgroundImage: `url(${imageUrl})` }}
         ></div>
       </div>
@@ -37,9 +40,9 @@ export function ContentCard({
         href={projectUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="absolute top-4 right-4 p-2 bg-black bg-opacity-50 rounded-full hover:bg-opacity-75 transition duration-300"
+        className="absolute top-4 right-4 p-2 text-gray-500 bg-opacity-50 rounded-full hover:bg-opacity-75 transition duration-300"
       >
-        <MoveRight className="text-white w-6 h-6" />
+        <MoveRight className="text-white w-4 h-4" />
       </a>
     </div>
   );

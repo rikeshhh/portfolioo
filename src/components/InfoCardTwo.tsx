@@ -6,14 +6,14 @@ export default function InfoCardTwo({blogContent}:BlogComponentProps) {
     return (
       <div className="container mx-auto">
       {blogContent.map((blog, index) => (
-        <div key={index} className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div key={index} className="grid grid-cols-1 md:grid-cols-2 gap-12 border-gray-400 pb-4 border-b-2">
           <div className="flex flex-col items-center justify-center h-full">
             <div className="mb-4 ">
               <p>{blog.blogRight}</p>
             </div>
             <div className="relative w-full h-[400px] overflow-hidden p-4 border rounded-3xl">
               <div
-                className="bg-center w-full h-full bg-no-repeat rounded-3xl"
+                className="bg-center bg-contain w-full h-full bg-no-repeat"
                 style={{ backgroundImage: `url(${blog.blogRightImage})` }}
               ></div>
             </div>
@@ -21,7 +21,7 @@ export default function InfoCardTwo({blogContent}:BlogComponentProps) {
           <div className="flex flex-col items-center justify-center h-full">
             <div className="relative w-full h-[400px] overflow-hidden p-4 border rounded-3xl">
               <div
-                className="bg-center w-auto h-full bg-no-repeat"
+                className="bg-center bg-contain w-full h-full bg-no-repeat"
                 style={{ backgroundImage: `url(${blog.blogLeftImage})` }}
               ></div>
             </div>

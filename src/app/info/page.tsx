@@ -26,9 +26,9 @@ export default function Info() {
       {loading ? (
         <Loader /> 
       ) : (
-        <section className="work w-full min-h-screen font-unbounded">
+        <section className="work w-full min-h-screen font-unbounded ">
           <div className="flex flex-col justify-center items-center container mx-auto md:px-56 gap-16">
-            <div className="w-full flex flex-col justify-start items-start py-24 px-4">
+            <div className="w-full flex flex-col justify-start items-start py-24 px-4 border-b-2 border-gray-400">
               <span className="flex items-center text-gray-400">
                 <Dot size={48} strokeWidth={3} />
                 About me

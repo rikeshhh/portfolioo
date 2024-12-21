@@ -4,9 +4,9 @@ export const BlogOne: BlogProps[] = [
   {
     blogHeadline: "Hello, I'm a Frontend Developer",
     blogLeft: "Crafting intuitive and dynamic web interfaces is my passion. I thrive on creating seamless user experiences.",
-    blogLeftImage: "https://cdsassets.apple.com/live/7WUAS350/images/macos/monterey/macos-monterey-mba-screenshot-toolbar.jpg",
+    blogLeftImage: "https://cdn.pixabay.com/photo/2020/08/06/17/50/business-5468706_1280.png",
     blogRight: "I specialize in modern technologies like React, Tailwind CSS, and Firebase, with experience in healthcare and e-commerce projects.",
-    blogRightImage: "https://cdsassets.apple.com/live/7WUAS350/images/macos/monterey/macos-monterey-mba-screenshot-toolbar.jpg",
+    blogRightImage: "https://cdn.pixabay.com/photo/2024/12/17/13/39/working-9273178_1280.png",
   },
 ];
 
@@ -14,9 +14,9 @@ export const BlogTwo: BlogProps[] = [
   {
     blogHeadline: "My Journey into Web Development",
     blogLeft: "From experimenting with HTML to mastering React and Next.js, my journey has been hands-on and fulfilling.",
-    blogLeftImage: "https://cdsassets.apple.com/live/7WUAS350/images/macos/monterey/macos-monterey-mba-screenshot-toolbar.jpg",
+    blogLeftImage: "https://cdn.pixabay.com/photo/2014/04/03/10/32/hiker-310829_1280.png",
     blogRight: "I've built projects like an asset management dashboard and a job portal connecting recruiters and job seekers.",
-    blogRightImage: "https://cdsassets.apple.com/live/7WUAS350/images/macos/monterey/macos-monterey-mba-screenshot-toolbar.jpg",
+    blogRightImage: "https://cdn.pixabay.com/photo/2018/05/12/22/34/worker-3394755_1280.png",
   },
 ];
 
@@ -24,9 +24,9 @@ export const BlogThree: BlogProps[] = [
   {
     blogHeadline: "What I Do in My Free Time",
     blogLeft: "When not coding, you'll find me fishing, experimenting in the kitchen, or diving into new tech trends.",
-    blogLeftImage: "https://cdsassets.apple.com/live/7WUAS350/images/macos/monterey/macos-monterey-mba-screenshot-toolbar.jpg",
+    blogLeftImage: "https://cdn.pixabay.com/photo/2022/04/08/18/43/fishing-7120075_1280.png",
     blogRight: "Cooking and fishing help me relax, while exploring tech keeps my creativity flowing.",
-    blogRightImage: "https://cdsassets.apple.com/live/7WUAS350/images/macos/monterey/macos-monterey-mba-screenshot-toolbar.jpg",
+    blogRightImage: "https://cdn.pixabay.com/photo/2017/10/06/23/43/woman-2825084_1280.png",
   },
 ];
 
