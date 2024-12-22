@@ -9,8 +9,9 @@ export default function Footer() {
   const infoActive = pathname === "/";
 
   return (
-    <footer className="container mx-auto flex gap-12 px-4 py-12 border-t-2">
-      <ul className="flex flex-col [&>li]:md:text-2xl gap-6">
+    <footer className="container mx-auto  border-t-2">
+    <div className="flex gap-12 px-4 py-12">
+    <ul className="flex flex-col [&>li]:md:text-2xl gap-6">
         <span className="flex items-center text-gray-400 text-base">MAIN</span>
         <li>
           <Link href="/" className={`${infoActive ? "text-gray-500" : ""}`}>
@@ -48,6 +49,8 @@ export default function Footer() {
           </Link>
         </li>
       </ul>
+    </div>
+      <p className="text-center text-xl">Thanks for stopping  by!</p>
     </footer>
   );
 }

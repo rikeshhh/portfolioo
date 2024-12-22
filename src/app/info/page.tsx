@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { BlogOne, BlogThree, BlogTwo } from "@/data/InfoData";
 import InfoCard from "@/components/InfoCard";
 import InfoCardTwo from "@/components/InfoCardTwo";
-import Loader from "@/components/Loader"; 
+import Loader from "@/components/Loader";
 import MyEducation from "@/section/Education";
 import MyExperience from "@/section/Experience";
 import Stack from "@/section/Stack";
@@ -16,7 +16,7 @@ export default function Info() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 3000); 
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -24,7 +24,7 @@ export default function Info() {
   return (
     <>
       {loading ? (
-        <Loader /> 
+        <Loader />
       ) : (
         <section className="work w-full min-h-screen font-unbounded ">
           <div className="flex flex-col justify-center items-center container mx-auto md:px-56 gap-16">
@@ -37,12 +37,10 @@ export default function Info() {
                 I am passionate about creating beautiful products that empower
                 people.
               </h2>
-          <div className="py-4  text-gray-400 md:hidden block">
-          <span className="flex items-cente">
-                Software Engineer
-              </span>
-          <p>Rikesh Shrestha</p>
-          </div>
+              <div className="py-4  text-gray-400 md:hidden block">
+                <span className="flex items-cente">Software Engineer</span>
+                <p>Rikesh Shrestha</p>
+              </div>
             </div>
             <InfoCard blogContent={BlogOne} />
             <InfoCardTwo blogContent={BlogTwo} />

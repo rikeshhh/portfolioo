@@ -11,7 +11,7 @@ export default function Header() {
 
   return (
     <header className="w-full py-4 sticky top-0 z-50 container mx-auto px-4">
-      <nav className="flex items-center justify-between w-full">
+      <nav className="flex items-center justify-between w-full gap-2">
         <div className="md:block hidden">
           <h2>Rikesh Shrestha</h2>
           <span>Software Engineer</span>
