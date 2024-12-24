@@ -1,10 +1,10 @@
 "use client";
 
-import { MoveUpRight} from "lucide-react";
+import { FileUser, Linkedin} from "lucide-react";
 import Link from "next/link";
 
 import { SlideTabsExample } from "@/components/Tab";
-import { ModeToggle } from "@/components/theme/ModeToggle";
+// import { ModeToggle } from "@/components/theme/ModeToggle";
 import HamburgerMenu from "@/components/HmburgerMenu";
 
 export default function Header() {
@@ -17,7 +17,6 @@ export default function Header() {
           <span>Software Engineer</span>
         </div>
         <SlideTabsExample />
-        <ModeToggle />
         <div className="gap-4 md:block hidden">
           <div className="flex gap-4">
           <Link
@@ -26,7 +25,7 @@ export default function Header() {
               rel="noopener noreferrer"
               className="flex gap-2 items-center"
             >
-              LinkedIn <MoveUpRight size={12} />
+              LinkedIn <Linkedin size={18} />
             </Link>
             <Link
                 href="/file/RikeshShresthaResume.pdf"
@@ -34,7 +33,7 @@ export default function Header() {
               rel="noopener noreferrer"
               className="flex gap-2 items-center"
             >
-              Resume <MoveUpRight size={12} />
+              Resume <FileUser size={18} />
             </Link>
           </div>
         </div>

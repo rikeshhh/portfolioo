@@ -1,5 +1,5 @@
 "use client";
-import { MoveUpRight } from "lucide-react";
+import { FileUser, GithubIcon, Linkedin } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -35,7 +35,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="flex gap-2 items-center"
           >
-            LinkedIn <MoveUpRight size={12} />
+            LinkedIn <Linkedin size={22} />
           </Link>
         </li>
         <li className="flex gap-2">
@@ -45,12 +45,21 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="flex gap-2 items-center"
           >
-            Resume <MoveUpRight size={12} />
+            Resume <FileUser size={22} />
+          </Link>
+        </li>
+        <li className="flex gap-2">
+          <Link
+            href="https://github.com/rikeshhh"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex gap-2 items-center"
+          >
+            Github <GithubIcon size={22} />
           </Link>
         </li>
       </ul>
     </div>
-      <p className="text-center text-xl">Thanks for stopping  by!</p>
     </footer>
   );
 }

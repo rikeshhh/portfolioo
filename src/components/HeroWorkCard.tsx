@@ -1,5 +1,6 @@
-import { MoveDown } from "lucide-react";
+import { GithubIcon, MoveDown } from "lucide-react";
 import { useTheme } from "next-themes";
+import Link from "next/link";
 
 export default function HeroWorkCard() {
   const { theme }: { theme?: string } = useTheme();
@@ -9,7 +10,21 @@ export default function HeroWorkCard() {
       <h2 className="text-3xl font-semibold mb-6  transition-colors duration-300 text-center">
         I craft products, interactions & stories.
       </h2>
-        <p>Below You Can find My Creations</p>
+      <div className="text-center">
+        <p className="mb-2">
+          Curious about my projects? Check out my GitHub for more creations!
+        </p>
+        <Link
+          href="https://github.com/rikeshhh"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit my GitHub profile"
+          className="flex gap-2 items-center justify-center text-blue-500 hover:text-blue-700"
+        >
+          <GithubIcon size={22} />
+          <span className="font-medium">Visit My GitHub</span>
+        </Link>
+      </div>
         <a
           href="#contentCard"
           target="_blank"
