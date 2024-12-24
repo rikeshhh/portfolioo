@@ -63,7 +63,7 @@ export default function HamburgerMenu() {
                 rel="noopener noreferrer"
                 className="flex gap-2 items-center"
               >
-                Github <GithubIcon size={22} />
+                Github <GithubIcon size={12} />
               </Link>
             </li>
             <li>

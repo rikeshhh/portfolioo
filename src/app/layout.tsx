@@ -37,7 +37,7 @@ export default function RootLayout({
         <section className="grid items-center  min-h-screen  gap-16 font-unbounded w-full">
           <ThemeProvider
             attribute="class"
-            defaultTheme="system"
+            defaultTheme="dark"
             enableSystem
             disableTransitionOnChange
           >
