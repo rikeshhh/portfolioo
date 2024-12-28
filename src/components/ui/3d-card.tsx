@@ -1,5 +1,7 @@
 "use client";
 
+
+
 import { cn } from "@/lib/utils";
 
 import React, {
@@ -8,6 +10,7 @@ import React, {
   useContext,
   useRef,
   useEffect,
+  HTMLAttributes,
 } from "react";
 
 const MouseEnterContext = createContext<
@@ -116,8 +119,7 @@ export const CardItem = ({
   rotateX?: number | string;
   rotateY?: number | string;
   rotateZ?: number | string;
-  [key: string]: string;
-}) => {
+}& HTMLAttributes<HTMLElement>) => {
   const ref = useRef<HTMLDivElement>(null);
   const [isMouseEntered] = useMouseEnter();
 
