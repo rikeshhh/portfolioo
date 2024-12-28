@@ -1,38 +1,39 @@
 import { GithubIcon, MoveDown } from "lucide-react";
-import { useTheme } from "next-themes";
 import Link from "next/link";
 
 export default function HeroWorkCard() {
-  const { theme }: { theme?: string } = useTheme();
-
   return (
-    <div className={`${theme==="dark"?"":"bg-white text-black"}  group p-4 relative w-full max-w-5xl md:min-h-96 light:text-red-500  border border-b-2 bg-black border-gray-700 rounded-3xl overflow-hidden  mx-auto hover:shadow-lg transition-shadow duration-300 ease-in-out flex flex-col justify-center items-center py-12 gap-8`}>
-      <h2 className="text-3xl font-semibold mb-6  transition-colors duration-300 text-center">
-        I craft products, interactions & stories.
+    <div className="h-screen w-full flex flex-col items-center justify-center px-4 gap-8">
+      <h2 className="text-3xl md:text-5xl font-semibold mb-4 text-center text-gray-100">
+        I craft products, interactions, and stories.
       </h2>
-      <div className="text-center">
-        <p className="mb-2">
-          Curious about my projects? Check out my GitHub for more creations!
+
+      <div className="text-center max-w-lg">
+        <p className="mb-4 text-gray-400">
+          Explore my journey as a developer. Discover my projects and creations
+          on GitHub!
         </p>
         <Link
           href="https://github.com/rikeshhh"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Visit my GitHub profile"
-          className="flex gap-2 items-center justify-center text-blue-500 hover:text-blue-700"
+          className="flex items-center justify-center gap-2 text-blue-400 hover:text-blue-600 transition-colors duration-300"
         >
           <GithubIcon size={22} />
           <span className="font-medium">Visit My GitHub</span>
         </Link>
       </div>
+
+      <div className="flex items-center justify-center mt-8">
         <a
           href="#contentCard"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-gray-400 hover:text-white rounded-lg  transition-colors duration-300 animate-bounce"
+          aria-label="Scroll to projects section"
+          className="text-gray-400 hover:text-white rounded-lg transition duration-300 animate-bounce"
         >
-          <MoveDown className="md:size-12" />
+          <MoveDown size={30} />
         </a>
+      </div>
     </div>
   );
 }

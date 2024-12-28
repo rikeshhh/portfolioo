@@ -13,6 +13,8 @@ const LenisScrollProvider = ({ children }: LenisScrollProviderProps) => {
       options={{
         lerp: 0.02,
         syncTouch: true,
+        smoothWheel:true,
+        touchMultiplier: 1.5,
       }}
     >
       {children}

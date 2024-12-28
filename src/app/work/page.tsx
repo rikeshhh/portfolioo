@@ -3,8 +3,9 @@ import { motion, useSpring, useTransform, useViewportScroll } from "framer-motio
 import { JSX, useEffect, useLayoutEffect, useRef, useState } from "react";
 
 import { projects } from "@/data/InfoData";
-import { ContentCard } from "@/components/ContentCard";
+import { AnimatedPinDemo } from "@/components/AnimatedPinCard";
 import HeroWorkCard from "@/components/HeroWorkCard";
+// import { ContentCard } from "@/components/ContentCard";
 import Loader from "@/components/Loader";
 
 type Project = {
@@ -62,21 +63,18 @@ export default function Work(): JSX.Element {
           <motion.div ref={containerRef} style={{ y: spring }} className="work w-full grid grid-cols-1 gap-8 container mx-auto">
             <HeroWorkCard />
             {projects.map((project: Project, index: number) => (
-              <motion.section
+              <section
                 key={index}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.5, ease: "easeOut" }}
+                className="w-full"
               >
-                <ContentCard
+                <AnimatedPinDemo
                   title={project.title}
                   description={project.description}
                   subtitle={project.subtitle}
                   imageUrl={project.imageUrl}
                   projectUrl={project.projectUrl}
                 />
-              </motion.section>
+              </section>
             ))}
           </motion.div>
           <motion.button

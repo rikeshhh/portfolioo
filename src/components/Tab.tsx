@@ -1,7 +1,8 @@
 "use client";
-import { TabProps } from "@/type/type";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+
+import { TabProps } from "@/type/type";
 
 export const SlideTabsExample = () => {
   return <SlideTabs />;
@@ -9,7 +10,7 @@ export const SlideTabsExample = () => {
 
 const SlideTabs = () => {
   return (
-    <ul className="relative mx-auto flex w-fit rounded-full border-2 border-black bg-white p-1">
+    <ul className="relative mx-auto flex w-fit rounded-full border-2 border-black bg-white p-1 z-50">
       <Tab href="/">Info</Tab>
       <Tab href="/work">Work</Tab>
     </ul>
