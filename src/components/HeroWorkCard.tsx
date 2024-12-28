@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function HeroWorkCard() {
   return (
-    <div className="h-screen w-full flex flex-col items-center justify-center px-4 gap-8">
+    <div className="h-auto w-full flex flex-col items-center justify-center px-4 gap-8">
       <h2 className="text-3xl md:text-5xl font-semibold mb-4 text-center text-gray-100">
         I craft products, interactions, and stories.
       </h2>

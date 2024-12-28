@@ -65,7 +65,7 @@ export default function Work(): JSX.Element {
             {projects.map((project: Project, index: number) => (
               <section
                 key={index}
-                className="w-full"
+                className="w-full z-10"
               >
                 <AnimatedPinDemo
                   title={project.title}
