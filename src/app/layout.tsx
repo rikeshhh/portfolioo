@@ -6,6 +6,7 @@ import Footer from "@/section/Footer";
 import Header from "@/section/Header";
 
 import "./globals.css";
+import LenisScrollProvider from "./providers/lenis-provider";
 
 const unbounded = Unbounded({
   subsets: ["latin"],
@@ -43,7 +44,9 @@ export default function RootLayout({
           >
             <Header />
             <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start container mx-auto px-8 w-full">
-              {children}
+              <LenisScrollProvider>
+                {children}
+              </LenisScrollProvider>
             </main>
               <Footer />
           </ThemeProvider>
