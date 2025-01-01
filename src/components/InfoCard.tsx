@@ -1,4 +1,3 @@
-import { Dot } from "lucide-react";
 
 import { BlogComponentProps } from "@/type/type";
 
@@ -10,23 +9,22 @@ export default function InfoCard({ blogContent }: BlogComponentProps) {
           <div className="flex flex-col items-center justify-center h-full">
             <div className="py-4 ">
               <h2 className="flex items-center text-gray-400">
-                <Dot size={48} strokeWidth={3} />
                 {blog.blogHeadline}
               </h2>
               <p>{blog.blogLeft}</p>
             </div>
-            <div className="relative w-full h-[400px] overflow-hidden p-4 border rounded-3xl bg-white">
+            <div className="relative w-full h-[400px] overflow-hidden p-4  rounded-3xl ">
               <div
-                className="bg-center bg-contain w-full h-full bg-no-repeat"
-                style={{ backgroundImage: `url(${blog.blogLeftImage})` }}
+                className="bg-center bg-cover w-full h-full bg-no-repeat"
+                style={{ backgroundImage: `url(${blog.blogLeftImage})`, borderRadius:"24px"}}
               ></div>
             </div>
           </div>
           <div className="flex flex-col items-start justify-start h-full">
-            <div className="relative w-full h-[400px] overflow-hidden p-4 border rounded-3xl bg-white">
+            <div className="relative w-full h-[400px] overflow-hidden p-4  rounded-3xl">
               <div
-                className="bg-center bg-contain w-full h-full bg-no-repeat"
-                style={{ backgroundImage: `url(${blog.blogRightImage})` }}
+                className="bg-center bg-cover w-full h-full bg-no-repeat"
+                style={{ backgroundImage: `url(${blog.blogRightImage})`, borderRadius:"24px" }}
               ></div>
             </div>
             <div className="py-4 ">

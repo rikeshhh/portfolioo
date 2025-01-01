@@ -12,6 +12,7 @@ export function AnimatedPinDemo({
   subtitle,
   imageUrl,
   projectUrl,
+  
 }: ContentCardProps) {
   console.log(subtitle);
   return (
@@ -24,7 +25,7 @@ export function AnimatedPinDemo({
 
           <div className="relative w-full h-64 md:h-auto md:aspect-[16/9] rounded-3xl overflow-hidden mt-4">
             <div
-              className="w-full h-full bg-center bg-no-repeat bg-contain transform transition-transform duration-500 ease-in-out group-hover:scale-110"
+              className="w-full h-full bg-center scale-110 bg-no-repeat bg-contain transform transition-transform duration-500 ease-in-out group-hover:scale-110"
               style={{ backgroundImage: `url(${imageUrl})` }}
             ></div>
           </div>

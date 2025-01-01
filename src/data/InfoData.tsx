@@ -4,9 +4,9 @@ export const BlogOne: BlogProps[] = [
   {
     blogHeadline: "Hello, I'm a Frontend Developer",
     blogLeft: "Crafting intuitive and dynamic web interfaces is my passion. I thrive on creating seamless user experiences.",
-    blogLeftImage: "https://cdn.pixabay.com/photo/2020/08/06/17/50/business-5468706_1280.png",
+    blogLeftImage: "https://img.freepik.com/free-photo/rear-view-programmer-working-all-night-long_1098-18697.jpg?t=st=1735717767~exp=1735721367~hmac=0be19b23f1a1b6cafe8aa00846bed31a9e6934a557403c0d8c6b2b200db1f6c5&w=996",
     blogRight: "I specialize in modern technologies like React, Tailwind CSS, and Firebase, with experience in healthcare and e-commerce projects.",
-    blogRightImage: "https://cdn.pixabay.com/photo/2024/12/17/13/39/working-9273178_1280.png",
+    blogRightImage: "https://img.freepik.com/free-photo/close-up-image-programer-working-his-desk-office_1098-18707.jpg?t=st=1735717804~exp=1735721404~hmac=8e988b8b77fd39b72c1bbf6c8cfcc6c50f91c355eac6d292d6d9f8246e3ca09d&w=996",
   },
 ];
 
@@ -14,9 +14,9 @@ export const BlogTwo: BlogProps[] = [
   {
     blogHeadline: "My Journey into Web Development",
     blogLeft: "From experimenting with HTML to mastering React and Next.js, my journey has been hands-on and fulfilling.",
-    blogLeftImage: "https://cdn.pixabay.com/photo/2014/04/03/10/32/hiker-310829_1280.png",
+    blogLeftImage: "https://img.freepik.com/free-photo/programming-background-collage_23-2149901771.jpg?t=st=1735718312~exp=1735721912~hmac=2d6ad616d707d13502379100528456ca7967cfe476bbacfaa81f2a48fb978c12&w=900",
     blogRight: "I've built projects like an asset management dashboard and a job portal connecting recruiters and job seekers.",
-    blogRightImage: "https://cdn.pixabay.com/photo/2018/05/12/22/34/worker-3394755_1280.png",
+    blogRightImage: "https://img.freepik.com/free-photo/programming-background-collage_23-2149901781.jpg?t=st=1735718139~exp=1735721739~hmac=8ac80bcf894a72e5877e6aa5ce6c94fd2716d27f4642ee87dd6b2e05fa6c67bb&w=996",
   },
 ];
 
@@ -24,9 +24,9 @@ export const BlogThree: BlogProps[] = [
   {
     blogHeadline: "What I Do in My Free Time",
     blogLeft: "When not coding, you'll find me fishing, experimenting in the kitchen, or diving into new tech trends.",
-    blogLeftImage: "https://cdn.pixabay.com/photo/2022/04/08/18/43/fishing-7120075_1280.png",
+    blogLeftImage: "https://img.freepik.com/free-photo/beautiful-sunset-landscape-with-fishing-rod_198523-25.jpg?t=st=1735718563~exp=1735722163~hmac=36dd0b578ce361e4203a8396a595f6f2fc319b85f99f03dd463d7e998473590a&w=996",
     blogRight: "Cooking and fishing help me relax, while exploring tech keeps my creativity flowing.",
-    blogRightImage: "https://cdn.pixabay.com/photo/2017/10/06/23/43/woman-2825084_1280.png",
+    blogRightImage: "https://cdn.pixabay.com/photo/2015/04/14/20/51/cook-722738_1280.jpg",
   },
 ];
 
@@ -68,6 +68,9 @@ export const projects: Project[] = [
     subtitle: "Revolutionizing Peer-to-Peer Commerce",
     imageUrl: "/screenshot/custom2c.png",
     projectUrl: "https://customer2customer.vercel.app/",
+    rotate: "12deg",
+    top: "45%",
+    left: "60%",
   },
   {
     title: "Assets Management System",
@@ -75,6 +78,9 @@ export const projects: Project[] = [
     subtitle: "Streamlining Asset Tracking for Organizations",
     imageUrl: "/screenshot/assetsms.png",
     projectUrl: "https://asset-management-system-one.vercel.app/",
+    rotate: "-6deg",
+    top: "20%",
+    left: "40%",
   },
   {
     title: "Student Management System",
@@ -82,6 +88,9 @@ export const projects: Project[] = [
     subtitle: "Simplifying Student Data Management",
     imageUrl: "/screenshot/studentms.png",
     projectUrl: "https://student-management-system-wine.vercel.app/",
+    rotate: "8deg",
+    top: "50%",
+    left: "40%",
   },
   {
     title: "Weather Forecastor",
@@ -89,6 +98,9 @@ export const projects: Project[] = [
     subtitle: "Real-Time Weather Updates at Your Fingertips",
     imageUrl: "/screenshot/weatherfore.png",
     projectUrl: "https://intuji-t-3.vercel.app/",
+    rotate: "18deg",
+    top: "20%",
+    left: "65%",
   },
   {
     title: "Dashboard",
@@ -96,6 +108,9 @@ export const projects: Project[] = [
     subtitle: "Data Insights and Visualizations Simplified",
     imageUrl: "/screenshot/rrms.png",
     projectUrl: "https://rr-dashboard-beryl.vercel.app/",
+    rotate: "-3deg",
+    top: "35%",
+    left: "55%",
   },
   {
     title: "Multi User Tic Tac Toe",
@@ -103,5 +118,9 @@ export const projects: Project[] = [
     subtitle: "Experience Classic Tic Tac Toe with Friends Online",
     imageUrl: "/screenshot/ticTac.png",
     projectUrl: "https://socket-jet.vercel.app/",
+    rotate: "12deg",
+    top: "45%",
+    left: "60%",
   },
 ];
+

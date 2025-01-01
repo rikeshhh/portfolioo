@@ -49,9 +49,13 @@ export interface Project {
   title: string;
   description: string;
   subtitle: string;
-  imageUrl: string; 
-  projectUrl: string; 
+  imageUrl: string;
+  projectUrl: string;
+  rotate: string; // Specifies the rotation angle, e.g., "12deg"
+  top: string; // Specifies the top position, e.g., "45%"
+  left: string; // Specifies the left position, e.g., "60%"
 }
+
 export interface LinkBoxProps {
   Icon: React.ComponentType<{ className?: string }>;
   href: string;

@@ -65,7 +65,8 @@ export default {
 		  fontFamily: {
 			unbounded: ['var(--font-unbounded)'],
 			roboto: ['var(--font-roboto)'],
-		  },
+			montserrat: ['var(--font-montserrat)'],
+		},
   	}
   },
   plugins: [],
