@@ -1,14 +1,12 @@
 "use client";
+import React from "react";
 
-import { FileUser, Linkedin} from "lucide-react";
+import { FileUser, Linkedin } from "lucide-react";
 import Link from "next/link";
 
-import { SlideTabsExample } from "@/components/Tab";
-// import { ModeToggle } from "@/components/theme/ModeToggle";
-import HamburgerMenu from "@/components/HmburgerMenu";
+import HamburgerMenu from "@/components/HamburgerMenu";
 
 export default function Header() {
-
   return (
     <header className="w-full py-4 sticky top-0 z-50 container mx-auto px-4">
       <nav className="flex items-center justify-between w-full gap-2">
@@ -16,10 +14,9 @@ export default function Header() {
           <h2>Rikesh Shrestha</h2>
           <span>Software Engineer</span>
         </div>
-        <SlideTabsExample />
         <div className="gap-4 md:block hidden">
           <div className="flex gap-4">
-          <Link
+            <Link
               href="https://www.linkedin.com/in/rikesh-shrestha-a521b1197"
               target="_blank"
               rel="noopener noreferrer"
@@ -28,7 +25,7 @@ export default function Header() {
               LinkedIn <Linkedin size={18} />
             </Link>
             <Link
-                href="/file/RikeshShresthaResume.pdf"
+              href="/file/RikeshShresthaResume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="flex gap-2 items-center"
@@ -37,7 +34,7 @@ export default function Header() {
             </Link>
           </div>
         </div>
-      <HamburgerMenu/>
+        <HamburgerMenu />
       </nav>
     </header>
   );

@@ -1,12 +1,8 @@
 import type { Metadata } from "next";
-import { Roboto, Unbounded,Montserrat } from "next/font/google";
-
+import { Roboto, Unbounded, Montserrat } from "next/font/google";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import Footer from "@/section/Footer";
 import Header from "@/section/Header";
-
-import LenisScrollProvider from "./providers/lenis-provider";
-
 import "./globals.css";
 
 const unbounded = Unbounded({
@@ -23,17 +19,19 @@ const roboto = Roboto({
   variable: "--font-roboto",
 });
 
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700"],
+  style: ["normal"],
+  variable: "--font-montserrat",
+});
+
 export const metadata: Metadata = {
   title: "Rikesh Shrestha",
-  description: "Portfolio of Rikesh Shrestha, a Frontend Developer passionate about building beautiful, user-friendly websites.",
+  description:
+    "Portfolio of Rikesh Shrestha, a Frontend Developer passionate about building beautiful, user-friendly websites.",
 };
 
-const montserrat = Montserrat({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '700'],
-  style: ['normal'],
-  variable: '--font-montserrat',
-});
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -41,24 +39,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${unbounded.variable} ${montserrat.variable} ${roboto.variable} antialiased`}>
-        <section className="grid items-center  min-h-screen  gap-16 font-unbounded w-full">
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="dark"
-            enableSystem
-            disableTransitionOnChange
-          >
+      <body
+        className={`${unbounded.variable} ${montserrat.variable} ${roboto.variable} antialiased `}
+      >
+        <ThemeProvider attribute="class" enableSystem disableTransitionOnChange>
+          <div className="flex flex-col min-h-screen">
             <Header />
-            <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start container mx-auto px-8 w-full font-montserrat">
-              <LenisScrollProvider>
-                {children}
-              </LenisScrollProvider>
+            <main className="flex-grow container mx-auto px-4 md:px-8 w-full font-montserrat">
+              {children}
             </main>
-              <Footer />
-          </ThemeProvider>
-        </section>
-    </body>
+            <Footer />
+          </div>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
