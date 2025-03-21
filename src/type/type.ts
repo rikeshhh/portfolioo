@@ -1,7 +1,8 @@
+import { MotionValue } from "framer-motion";
 import { ReactNode } from "react";
 
 export interface BlogProps {
-  blogHeadline:string;
+  blogHeadline: string;
   blogLeft: string;
   blogLeftImage: string;
   blogRight: string;
@@ -19,13 +20,13 @@ interface Role {
 
 interface ExperienceItem {
   company: string;
-  logo: string; 
-  roles: Role[]; 
+  logo: string;
+  roles: Role[];
 }
 
 interface EducationItem {
   institution: string;
-  logo: string; 
+  logo: string;
   degree: string;
   duration: string;
   description: string;
@@ -47,20 +48,57 @@ export interface ContentCardProps {
 }
 export interface Project {
   title: string;
+  subtitle?: string;
   description: string;
-  subtitle: string;
-  imageUrl: string;
-  projectUrl: string;
-  rotate: string; // Specifies the rotation angle, e.g., "12deg"
-  top: string; // Specifies the top position, e.g., "45%"
-  left: string; // Specifies the left position, e.g., "60%"
+  src: string;
+  imageUrl?: string;
+  link: string;
+  projectUrl?: string;
+  color: string;
+  rotate?: number;
+  tech?: string[];
 }
-
 export interface LinkBoxProps {
   Icon: React.ComponentType<{ className?: string }>;
   href: string;
 }
-export interface TabProps  {
+export interface TabProps {
   children: ReactNode;
   href: string;
+}
+
+export type FormData = {
+  name: string;
+  email: string;
+  message: string;
 };
+
+export interface Field {
+  id: keyof FormData;
+  label: string;
+  placeholder: string;
+  type?: string;
+  requiredMessage: string;
+  isTextarea?: boolean;
+}
+
+export interface CardProps {
+  i: number;
+  project: Project;
+  progress: MotionValue<number>;
+  range: [number, number];
+  targetScale: number;
+}
+
+export interface Feature {
+  title: string;
+  demoText: string;
+  gradientFrom: string;
+  gradientTo: string;
+  textColor: string;
+}
+
+export interface BounceCardProps {
+  className?: string;
+  feature: Feature;
+}

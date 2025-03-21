@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import { Roboto, Unbounded, Montserrat } from "next/font/google";
-import { ThemeProvider } from "@/components/theme/theme-provider";
-import Footer from "@/section/Footer";
-import Header from "@/section/Header";
+import { Roboto, Unbounded } from "next/font/google";
+import Header from "@/components/common/Header";
 import "./globals.css";
+import RevealLink from "@/section/reveal-links";
 
 const unbounded = Unbounded({
   subsets: ["latin"],
@@ -19,12 +18,7 @@ const roboto = Roboto({
   variable: "--font-roboto",
 });
 
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "700"],
-  style: ["normal"],
-  variable: "--font-montserrat",
-});
+
 
 export const metadata: Metadata = {
   title: "Rikesh Shrestha",
@@ -40,17 +34,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${unbounded.variable} ${montserrat.variable} ${roboto.variable} antialiased `}
+        className={`${unbounded.variable}  ${roboto.variable} antialiased `}
       >
-        <ThemeProvider attribute="class" enableSystem disableTransitionOnChange>
-          <div className="flex flex-col min-h-screen">
-            <Header />
-            <main className="flex-grow container mx-auto px-4 md:px-8 w-full font-montserrat">
-              {children}
-            </main>
-            <Footer />
-          </div>
-        </ThemeProvider>
+        <Header />
+        <main className="flex-grow container mx-auto px-4 md:px-8 w-full font-montserrat">
+          {children}
+        </main>
+        <RevealLink />
       </body>
     </html>
   );
