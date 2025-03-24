@@ -18,8 +18,6 @@ const roboto = Roboto({
   variable: "--font-roboto",
 });
 
-
-
 export const metadata: Metadata = {
   title: "Rikesh Shrestha",
   description:

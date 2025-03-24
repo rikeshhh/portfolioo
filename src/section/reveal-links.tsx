@@ -5,11 +5,12 @@ import React from "react";
 
 export const RevealLink = () => {
   return (
-    <footer className="grid place-content-center gap-4 bg-gray-900 px-8 py-14 text-white">
-      <FlipLink href="https://twitter.com/yourhandle">Twitter</FlipLink>
-      <FlipLink href="https://linkedin.com/in/yourprofile">LinkedIn</FlipLink>
-      <FlipLink href="https://facebook.com/yourpage">Facebook</FlipLink>
-      <FlipLink href="https://instagram.com/yourhandle">Instagram</FlipLink>
+    <footer className="grid place-content-center gap-4 bg-gray-900 px-8 py-4 text-white w-full">
+      <FlipLink href="/file/RikeshShresthaResume.pdf">Resume</FlipLink>
+      <FlipLink href="https://www.linkedin.com/in/rikesh-shrestha-a521b1197">
+        LinkedIn
+      </FlipLink>
+      <FlipLink href="https://github.com/rikeshhh">Github</FlipLink>
     </footer>
   );
 };

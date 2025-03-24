@@ -3,7 +3,6 @@ export const navItems = [
   { label: "Home", href: "#hero" },
   { label: "Features", href: "#features" },
   { label: "Projects", href: "#projects" },
-  { label: "Contact", href: "#contact" },
   {
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/rikesh-shrestha-a521b1197",

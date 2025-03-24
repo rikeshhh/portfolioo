@@ -6,7 +6,11 @@ import { useRef } from "react";
 import { ProjectCard } from "@/components/section/project-section/project-card";
 import { projects } from "@/data/project-data";
 
-export default function ProjectsSection() {
+interface ProjectsSectionProps {
+  id: string;
+}
+
+export default function ProjectsSection({ id }: ProjectsSectionProps) {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
@@ -15,10 +19,10 @@ export default function ProjectsSection() {
 
   return (
     <ReactLenis root>
-      <section ref={container} className="min-h-screen">
-          <h2 className="text-4xl md:text-6xl font-semibold text-center tracking-tight">
-            My Projects
-          </h2>
+      <section id={id} ref={container} className="min-h-screen">
+        <h2 className="text-4xl mt-36 md:text-6xl font-semibold text-center tracking-tight">
+          My Projects
+        </h2>
 
         {projects.slice(0, 8).map((project, i) => {
           const targetScale = 1 - (projects.length - i) * 0.05;

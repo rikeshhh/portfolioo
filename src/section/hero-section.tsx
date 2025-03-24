@@ -2,9 +2,9 @@
 
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Button } from "@/components/ui/button";
 import TextAnimation from "@/components/section/hero-section/text-animation";
 import { RandomizedTextEffect } from "@/components/section/hero-section/text-randomized";
+import { useSmoothScroll } from "@/hooks/smooth-scroll";
 
 const containerVariants = {
   hidden: {},
@@ -18,7 +18,7 @@ const containerVariants = {
 export const HeroSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { amount: 0.3 });
-
+  const { scrollToSection } = useSmoothScroll();
   const buttonVariants = {
     hidden: { opacity: 0, scale: 0.8 },
     visible: {
@@ -44,7 +44,7 @@ export const HeroSection = () => {
         <TextAnimation
           as="h1"
           text="Hey, I'm "
-          classname="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight drop-shadow-lg"
+          classname="text-2xl md:text-7xl lg:text-8xl font-extrabold tracking-tight drop-shadow-lg"
           direction="down"
           lineAnime={true}
           viewport={{ once: true }}
@@ -70,12 +70,14 @@ export const HeroSection = () => {
         />
 
         <motion.div variants={buttonVariants}>
-          <Button
-            asChild
+          <motion.a
+            href="#projects"
+            onClick={(e) => scrollToSection(e, "#projects")}
             className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+            whileHover={{ scale: 1.05 }}
           >
-            <a href="#projects">Explore My Work</a>
-          </Button>
+            See My Projects
+          </motion.a>
         </motion.div>
 
         <motion.div

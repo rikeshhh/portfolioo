@@ -35,13 +35,15 @@ export const ProjectCard: React.FC<CardProps> = ({
         }}
         className="flex flex-col relative -top-[25%] h-[500px] w-full sm:w-[70%] max-w-4xl rounded-lg shadow-lg origin-top overflow-hidden"
       >
-        <motion.div className="relative h-[75%] w-full" style={{ scale: imageScale }}>
+        <motion.div
+          className="relative h-[75%] w-full"
+          style={{ scale: imageScale }}
+        >
           <Image
             src={project.src}
             alt={project.title}
-            layout="fill"
-            objectFit="cover"
-            className="transition-transform duration-300"
+            fill
+            className="transition-transform duration-300 object-contain"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
         </motion.div>

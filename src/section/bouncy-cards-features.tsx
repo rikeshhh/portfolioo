@@ -1,6 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
-import Link from "next/link";
 import { features } from "@/data/features";
 import { BounceCard } from "@/components/section/bouncy-cards-features/bouncy-card";
 import { CardTitle } from "@/components/section/bouncy-cards-features/bouncy-card-title";
@@ -13,15 +11,6 @@ export const BouncyCardsFeatures = () => {
           What I Bring to the Table
           <span className="text-blue-500"> Skills & Vibes</span>
         </h2>
-        <Link href="/projects">
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="whitespace-nowrap rounded-lg bg-blue-600 px-4 py-2 font-medium text-white shadow-xl transition-colors hover:bg-blue-700"
-          >
-            See My Work
-          </motion.button>
-        </Link>
       </div>
       <div className="mb-4 grid grid-cols-12 gap-4">
         <BounceCard feature={features[0]} className="col-span-12 md:col-span-4">
